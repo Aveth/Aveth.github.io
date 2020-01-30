@@ -13,7 +13,10 @@
 
 	function receiveMessage(event)
 	{
-	  event.source.postMessage("hi there yourself!  the secret response " +
+	
+		console.log(event.data)
+
+	 	event.source.postMessage("hi there yourself!  the secret response " +
 		                   "is: rheeeeet!",
 		                   event.origin);
 	}

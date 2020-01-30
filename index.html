@@ -14,10 +14,9 @@
 	function receiveMessage(event)
 	{
 	
-		console.log("sending messages")
-		console.log(event.data)
-
-	 	event.source.postMessage("replying", event.origin)
+		console.log("sending messages");
+		console.log(event.data);
+		console.log(event.ports);
 	}
 	  	
   	var channel = new MessageChannel()

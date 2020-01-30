@@ -17,7 +17,7 @@
 		console.log("sending messages")
 		console.log(event.data)
 
-	 	window.parent.postMessage("message received", "*")
+	 	event.source.postMessage("replying", event.origin)
 	}
 	  	
   	var channel = new MessageChannel()

@@ -12,7 +12,14 @@
   <script>
   	
   	var channel = new MessageChannel()
-  	window.parent.postMessage("some data",  "*", [channel.port2])
+  	window.parent.postMessage("parent with 3 params",  "*", [channel.port2])
+  	window.parent.postMessage("parent with 2 params", [channel.port2])
+
+  	window..postMessage("window with 3 params",  "*", [channel.port2])
+  	window.postMessage("window with 2 params", [channel.port2])
+
+  	document.postMessage("document with 3 params", "*", [channel.port2])
+  	document.postMessage("document with 2 params", [channel.port2])
 
   </script>
 </body>

@@ -1,0 +1,19 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Sample post message</title>
+  
+</head>
+
+<body>
+  <script>
+  	
+  	var channel = MessageChannel()
+  	window.parent.postMessage("some data",  "*", [channel.port2])
+
+  </script>
+</body>
+</html>

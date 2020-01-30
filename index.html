@@ -13,6 +13,8 @@
   	
   	var channel = new MessageChannel()
 
+	console.log("sending messages")
+
   	window.parent.postMessage("window with 3 params on port 2",  "*", [channel.port2])
   	window.parent.postMessage("window with 2 params on port 2", [channel.port2])
 

@@ -11,6 +11,7 @@
 <body>
   <script>
 
+/*
 	function receiveMessage(event)
 	{
 	
@@ -21,9 +22,11 @@
 		event.ports[0].postMessage("replying");
 	}
 	  	
-  	var channel = new MessageChannel()
-
 	window.addEventListener("message", receiveMessage, false);
+*/
+
+  	var channel = new MessageChannel()
+  	channel.port1.sendMessage("replying")
 
 
   </script>

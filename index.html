@@ -13,9 +13,8 @@
   	
   	var channel = new MessageChannel()
 
-  	window.postMessage("window with 3 params on port 2",  "*", [channel.port2])
-  	window.postMessage("window with 2 params on port 2", [channel.port2])
-
+  	document.postMessage("window with 3 params on port 2",  "*", [channel.port2])
+  	document.postMessage("window with 2 params on port 2", [channel.port2])
 
 
   </script>

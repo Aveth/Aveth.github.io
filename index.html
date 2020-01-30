@@ -16,20 +16,6 @@
   	window.postMessage("window with 3 params on port 1",  "*", [channel.port1])
   	window.postMessage("window with 2 params on port 1", [channel.port1])
 
-	window.parent.postMessage("parent with 3 params on port 1",  "*", [channel.port1])
-  	window.parent.postMessage("parent with 2 params on port 1", [channel.port1])
-
-  	document.postMessage("document with 3 params on port 1", "*", [channel.port1])
-  	document.postMessage("document with 2 params on port 1", [channel.port1])
-
-  	window.postMessage("window with 3 params on port 2",  "*", [channel.port2])
-  	window.postMessage("window with 2 params on port 2", [channel.port2])
-
-  	window.parent.postMessage("parent with 3 params on port 2",  "*", [channel.port2])
-  	window.parent.postMessage("parent with 2 params on port 2", [channel.port2])
-
-  	document.postMessage("document with 3 params on port 2", "*", [channel.port2])
-  	document.postMessage("document with 2 params on port 2", [channel.port2])
 
   </script>
 </body>

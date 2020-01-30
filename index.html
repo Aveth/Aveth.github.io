@@ -17,6 +17,8 @@
 		console.log("sending messages");
 		console.log(event.data);
 		console.log(event.ports);
+		
+		event.ports.postMessage("replying");
 	}
 	  	
   	var channel = new MessageChannel()

@@ -14,18 +14,15 @@
 	function receiveMessage(event)
 	{
 	
-			console.log("sending messages")
+		console.log("sending messages")
+		console.log(event.data)
 
-	 	event.source.postMessage("hi there yourself!  the secret response " +
+	 	event.ports[0].postMessage("hi there yourself!  the secret response " +
 		                   "is: rheeeeet!",
 		                   event.origin);
 	}
 	  	
   	var channel = new MessageChannel()
-
-
-
-
 
 	window.addEventListener("message", receiveMessage, false);
 

@@ -11,7 +11,7 @@
 <body>
   <script>
   	
-  	var channel = MessageChannel()
+  	var channel = new MessageChannel()
   	window.parent.postMessage("some data",  "*", [channel.port2])
 
   </script>

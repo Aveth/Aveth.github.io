@@ -17,9 +17,7 @@
 		console.log("sending messages")
 		console.log(event.data)
 
-	 	event.ports[0].postMessage("hi there yourself!  the secret response " +
-		                   "is: rheeeeet!",
-		                   event.origin);
+	 	window.parent.postMessage("message received", event.origin)
 	}
 	  	
   	var channel = new MessageChannel()

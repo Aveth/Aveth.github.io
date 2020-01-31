@@ -12,13 +12,18 @@
   <script>
 
   	var poster = window.parent;
+  	var postingToPort = false
 
 	function receiveMessage(event) {
 		poster = event.ports[0];
 	}
 
 	function onButtonClick() {
-		poster.postMessage("sending to app");
+		if (postingToPort) {
+			poster.postMessage("sending to app");
+		} else {
+			poster.postMessage("sending to app", "*");
+		}
 	}
 	  	
 	window.addEventListener("message", receiveMessage, false);

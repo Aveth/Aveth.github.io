@@ -16,6 +16,9 @@
 
 	function receiveMessage(event) {
 		console.log("web received: " + event.data);
+		
+		if (event.ports[0] == null) return;
+
 		poster = event.ports[0];
 		postingToPort = true;
 	}

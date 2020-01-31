@@ -15,6 +15,7 @@
   	var postingToPort = false
 
 	function receiveMessage(event) {
+		console.log("web received: " + event.data);
 		poster = event.ports[0];
 		postingToPort = true;
 	}

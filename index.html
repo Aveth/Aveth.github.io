@@ -11,25 +11,21 @@
 <body>
   <script>
 
-/*
-	function receiveMessage(event)
-	{
-	
-		console.log("sending messages");
-		console.log(event.data);
-		console.log(event.ports);
-		
-		event.ports[0].postMessage("replying");
+  	var poster = window.parent;
+
+	function receiveMessage(event) {
+		poster = event.ports[0];
+	}
+
+	function onButtonClick() {
+		poster.postMessage("sending to app");
 	}
 	  	
 	window.addEventListener("message", receiveMessage, false);
-*/
-
-  	var channel = new MessageChannel()
-  	channel.port1.start();
-  	channel.port1.postMessage("replying");
-
 
   </script>
+
+  <button onclick="onButtonClick()">CLICK ME</button>
+
 </body>
 </html>
